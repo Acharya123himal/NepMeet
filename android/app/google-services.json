@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "963817688662",
+    "firebase_url": "https://nepmeet-1580718388031.firebaseio.com",
+    "project_id": "nepmeet-1580718388031",
+    "storage_bucket": "nepmeet-1580718388031.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963817688662:android:297e211697368e3f7135f7",
+        "android_client_info": {
+          "package_name": "com.webdroidit.nepmeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963817688662-pcomqua3km91f05a1blipialdkt1ado0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcMZBneLprMXNej9yubC1FfbiL68hHHJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963817688662-h8ahdfn8hu7v8uont02ljbghd0i1eisg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "963817688662-bfl9tj7tnqvu2l48fnilcea4pqupgs5n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nepmeet.life"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
