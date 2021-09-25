@@ -7,12 +7,14 @@ class UserProfileImage extends StatelessWidget {
   final double radius;
   final String profileImageUrl;
   final File profileImage;
+
   const UserProfileImage({
     Key key,
     @required this.radius,
     @required this.profileImageUrl,
     this.profileImage,
   }) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(

@@ -9,10 +9,10 @@ class CreatePostState extends Equatable {
   final Failure failure;
 
   const CreatePostState(
-    @required this.postImage,
-    @required this.caption,
-    @required this.status,
-    @required this.failure,
+      this.postImage,
+      this.caption,
+      this.status,
+      this.failure,
   );
 
   factory CreatePostState.initial() {

@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nepmeet/blocs/auth/auth_bloc.dart';
+import 'package:nepmeet/blocs/blocs.dart';
 import 'package:nepmeet/repositories/repositories.dart';
 import 'package:nepmeet/screens/profile/bloc/profile_bloc.dart';
 import 'package:nepmeet/screens/profile/widgets/widgets.dart';
@@ -11,7 +11,7 @@ import 'package:smart_alert_dialog/smart_alert_dialog.dart';
 class ProfileScreenArgs {
   final String userId;
 
-  const ProfileScreenArgs(@required this.userId);
+  const ProfileScreenArgs(this.userId);
 }
 
 class ProfileScreen extends StatefulWidget {
@@ -122,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                             followers: state.user.followers,
                             following: state.user.following,
                             points: state.user.points,
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -134,7 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         bio: state.user.bio,
                         points: state.user.points,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

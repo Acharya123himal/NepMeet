@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nepmeet/widgets/widgets.dart';
 
 class SearchScreen extends StatefulWidget {
+  static const String routeName = '/search';
+
   @override
   _SearchScreenState createState() => _SearchScreenState();
 }
@@ -47,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen> {
             },
           ),
         ),
-        body: BlocConsumer<SearchCubit, SearchState>(
+        body: BlocBuilder<SearchCubit, SearchState>(
           builder: (context, state) {
             switch (state.status) {
               case SearchStatus.loading:
@@ -83,7 +85,6 @@ class _SearchScreenState extends State<SearchScreen> {
                 return const SizedBox.shrink();
             }
           },
-          listener: (context, state) {},
         ),
       ),
     );

@@ -19,7 +19,7 @@ class EditProfileArgs {
 class EditProfileScreen extends StatelessWidget {
   static const routeName = '/editProfile';
 
-  static Route route(@required EditProfileArgs args) {
+  static Route route( EditProfileArgs args) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
       builder: (context) => BlocProvider<EditProfileCubit>(

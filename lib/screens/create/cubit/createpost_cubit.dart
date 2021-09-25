@@ -5,7 +5,6 @@ import 'package:meta/meta.dart';
 import 'package:nepmeet/blocs/blocs.dart';
 import 'package:nepmeet/models/models.dart';
 import 'package:nepmeet/repositories/repositories.dart';
-
 part 'createpost_state.dart';
 
 class CreatePostCubit extends Cubit<CreatePostState> {

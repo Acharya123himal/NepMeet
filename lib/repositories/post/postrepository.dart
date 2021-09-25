@@ -3,7 +3,6 @@ import 'package:meta/meta.dart';
 import 'package:nepmeet/config/paths.dart';
 import 'package:nepmeet/models/models.dart';
 import 'package:nepmeet/repositories/repositories.dart';
-
 class PostRepository extends BasePostRepository {
   final FirebaseFirestore _firebaseFirestore;
   PostRepository({FirebaseFirestore firebaseFirestore})
@@ -15,7 +14,10 @@ class PostRepository extends BasePostRepository {
   }
 
   @override
-  Future<void> createComment({@required Comment comment}) async {
+  Future<void> createComment({
+    @required Post post,
+    @required Comment comment
+  }) async {
     await _firebaseFirestore
         .collection(Paths.comments)
         .doc(comment.postId)

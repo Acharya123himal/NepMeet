@@ -11,7 +11,9 @@ class StorageRepository extends BaseStorageRepository {
       : _firebaseStorage = firebaseStorage ?? FirebaseStorage.instance;
 
   Future<String> _uploadImage(
-      {@required File image, @required String ref}) async {
+      {@required File image, 
+      @required String ref
+    }) async {
     final downloadUrl = _firebaseStorage
         .ref(ref)
         .putFile(image)
@@ -37,7 +39,9 @@ class StorageRepository extends BaseStorageRepository {
   }
 
   @override
-  Future<String> uploadPostImage({@required File image}) async {
+  Future<String> uploadPostImage({
+    @required File image
+  }) async {
     final imageId = Uuid().v4();
     final downloadUrl = await _uploadImage(
       image: image,

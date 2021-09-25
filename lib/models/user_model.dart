@@ -82,7 +82,7 @@ class User extends Equatable {
 
   factory User.fromDocument(DocumentSnapshot doc) {
     if (doc == null) return null;
-    final data = doc.data();
+    final data = doc;
     return User(
       id: doc.id,
       username: data['username'] ?? '',

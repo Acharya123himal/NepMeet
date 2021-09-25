@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:nepmeet/config/paths.dart';
 import 'package:nepmeet/models/models.dart';
 import 'package:nepmeet/repositories/repositories.dart';
-import 'package:meta/meta.dart';
 
 class AuthRepository extends BaseAuthRepository {
   final FirebaseFirestore _firebaseFirestore;
@@ -22,8 +20,8 @@ class AuthRepository extends BaseAuthRepository {
 
   @override
   Future<auth.User> signInWithEmailAndPassword({
-    @required String email = '',
-    @required String password = '',
+   String email = '',
+   String password = '',
   }) async {
     try {
       final credential = await _firebaseAuth.signInWithEmailAndPassword(
@@ -40,9 +38,9 @@ class AuthRepository extends BaseAuthRepository {
 
   @override
   Future<auth.User> signUpWithEmailAndPassword({
-    @required String username = "",
-    @required String email = '',
-    @required String password = '',
+     String username = "",
+     String email = '',
+     String password = '',
   }) async {
     try {
       final credential = await _firebaseAuth.createUserWithEmailAndPassword(

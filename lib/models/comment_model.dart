@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 import 'package:nepmeet/config/paths.dart';
 import 'package:nepmeet/models/user_model.dart';
 
@@ -13,12 +12,12 @@ class Comment extends Equatable {
   final int commentLikes;
 
   Comment(
-    @required this.id,
-    @required this.postId,
-    @required this.author,
-    @required this.content,
-    @required this.date,
-    @required this.commentLikes,
+    this.id,
+    this.postId,
+    this.author,
+    this.content,
+    this.date,
+    this.commentLikes,
   );
 
   @override
@@ -62,7 +61,7 @@ class Comment extends Equatable {
 
   static Future<Comment> fromDocument(DocumentSnapshot doc) async {
     if (doc == null) return null;
-    final data = doc.data();
+    final data = doc;
     final authorRef = data['author'] as DocumentReference;
     if (authorRef != null) {
       final authorDoc = await authorRef.get();

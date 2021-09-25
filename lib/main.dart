@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nepmeet/blocs/blocs.dart';
 import 'package:nepmeet/config/custom_router.dart';
@@ -54,7 +55,8 @@ class _MyAppState extends State<MyApp> {
             primaryColor: Color(0xff1e1e2a),
             visualDensity: VisualDensity.adaptivePlatformDensity,
             appBarTheme: AppBarTheme(
-                brightness: Brightness.light,
+              systemOverlayStyle:SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
+                // brightness: Brightness.light,
                 color: Color(0xff1e1e2a),
                 iconTheme: const IconThemeData(color: Colors.white)),
             textTheme: const TextTheme(

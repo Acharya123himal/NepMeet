@@ -11,7 +11,7 @@ class ImageHelper {
     @required CropStyle cropStyle,
     @required String title,
   }) async {
-    final pickedFile = await ImagePicker().getImage(
+    final pickedFile = await ImagePicker().pickImage(
       source: ImageSource.gallery,
     );
     if (pickedFile != null) {
